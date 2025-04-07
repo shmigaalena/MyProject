@@ -28,3 +28,6 @@ class ExpenseTracker:
 
     def get_expenses(self):
         return self.expenses.copy()
+
+    def count_expenses(self):
+        return len(self.expenses)
