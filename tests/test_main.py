@@ -50,3 +50,9 @@ def test_negative_amount_raises():
     tracker = ExpenseTracker()
     with pytest.raises(ValueError):
         tracker.add_expense(-50, "food")
+
+def test_count_expenses():
+    tracker = ExpenseTracker()
+    tracker.add_expense(10, "food")
+    tracker.add_expense(20, "transport")
+    assert tracker.count_expenses() == 2
